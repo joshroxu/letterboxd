@@ -20,7 +20,7 @@ window.onmouseleave = (e) => {
 }
 
 window.onkeypress = (e) => {
-	if (mouseOn == true && e.key == "w") {
+    if (mouseOn == true && e.key == "w") {
         if (target != null) {
             target.nextElementSibling.firstChild.firstChild.firstChild.click();
         }

@@ -10,19 +10,17 @@ let mouseOn = false;
 let target = null;
 
 window.onmouseover = (e) => {
-  mouseOn = true;
-  target = e.target;
+    mouseOn = true;
+    target = e.target;
 }
 
 window.onmouseleave = (e) => {
-  mouseOn = false;
-  target = null;
+    mouseOn = false;
+    target = null;
 }
 
 window.onkeypress = (e) => {
-	if (mouseOn == true && e.key == "w") {
-    if (target != null) {
-      target.nextElementSibling.firstChild.firstChild.firstChild.click();
+	if (mouseOn == true && e.key == "w" && target != null) {
+        target.nextElementSibling.firstChild.firstChild.firstChild.click();
     }
-  }
 }

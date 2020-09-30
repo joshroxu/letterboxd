@@ -6,20 +6,20 @@
 // ==/UserScript==
 
 
-var mouseOn = false;
-var target = null;
+let mouseOn = false;
+let target = null;
 
-window.onmouseover = function (e) {
+window.onmouseover = (e) => {
   mouseOn = true;
   target = e.target;
 }
 
-window.onmouseleave = function (e) {
+window.onmouseleave = (e) => {
   mouseOn = false;
   target = null;
 }
 
-window.onkeypress = function (e) {
+window.onkeypress = (e) => {
 	if (mouseOn == true && e.key == "w") {
     if (target != null) {
       target.nextElementSibling.firstChild.firstChild.firstChild.click();
